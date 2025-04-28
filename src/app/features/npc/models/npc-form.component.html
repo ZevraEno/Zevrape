@@ -1,0 +1,10 @@
+<form (ngSubmit)="createNPC()" class="space-y-4 p-4">
+  <input [(ngModel)]="newNpc.name" name="name" required placeholder="Nom du NPC" class="input" />
+  <textarea [(ngModel)]="newNpc.description" name="description" placeholder="Description" class="textarea"></textarea>
+  <input [(ngModel)]="newNpc.race" name="race" placeholder="Race" class="input" />
+  <input [(ngModel)]="newNpc.role" name="role" placeholder="Rôle" class="input" />
+  <input [(ngModel)]="newNpc.classe" name="classe" placeholder="Classe" class="input" />
+  <input [(ngModel)]="newNpc.level" name="level" type="number" class="input" />
+
+  <button type="submit" class="btn">Créer NPC</button>
+</form>

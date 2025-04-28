@@ -1,0 +1,10 @@
+<app-roll-dicer></app-roll-dicer>
+<div class="fezur">
+  <div *ngIf="results?.length" class="dice-results">
+    <h3>Résultats</h3>
+    <div *ngFor="let result of results" class="dice-result">
+      <p>Total : {{ result.total }}</p>
+    </div>
+  </div>
+</div>
+

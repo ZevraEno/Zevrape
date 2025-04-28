@@ -1,0 +1,14 @@
+
+<div class="app-container">
+  <aside [ngClass]="{
+    'aside-admin': role() === 'GameMaster',
+    'aside-user': role() === 'Player'
+  }">
+    <p-panel-menu [model]="items"/>
+  </aside>
+
+  <main>
+    <router-outlet/>
+  </main>
+</div>
+`

@@ -1,0 +1,10 @@
+<div class="waiting-room">
+  <h1>Waiting Room</h1>
+
+  <div *ngIf="users.length === 0">Personne connecté pour l'instant...</div>
+  <ul>
+    <li *ngFor="let user of users">{{ user.pseudonym }} ({{ user.role }})</li>
+  </ul>
+  <button (click)="startGame()">Commencer la Partie</button>
+</div>
+

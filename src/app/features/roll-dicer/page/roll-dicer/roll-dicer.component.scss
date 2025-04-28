@@ -1,0 +1,59 @@
+.dice-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 400px;
+  margin: auto;
+  padding: 1.5rem;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  background-color: #f9f9f9;
+}
+
+.dice-inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.dice-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.dice-input {
+  width: 80px;
+  padding: 0.3rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.roll-button {
+  padding: 0.5rem 1rem;
+  background-color: #9a7eca;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.roll-button:hover {
+  background-color: #2ecc78;
+}
+
+.dice-results {
+  max-width: 400px;
+  margin: 2rem auto;
+  padding: 1rem;
+  background: rgba(124, 164, 195, 0.64);
+  border-radius: 8px;
+}
+
+.dice-result {
+  margin-bottom: 1rem;
+  border-bottom: 1px dashed rgba(204, 204, 204, 0.61);
+  padding-bottom: 0.5rem;
+}

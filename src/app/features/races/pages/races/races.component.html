@@ -1,0 +1,36 @@
+<p-table
+  [value]="races"
+  [paginator]="true"
+  [rows]="rows"
+  [first]="first"
+  [totalRecords]="totalRaces"
+  [rowsPerPageOptions]="rowsPerPageOptions"
+  (onPageChange)="onPageChange($event)"
+  [responsiveLayout]="'scroll'"
+>
+  <ng-template pTemplate="header">
+    <tr>
+      <th>Nom</th>
+      <th>Description</th>
+      <th>bonus Stats</th>
+      <th>Taille</th>
+      <th>Vitesse</th>
+    </tr>
+  </ng-template>
+  <ng-template pTemplate="body" let-race>
+    <tr>
+      <td>{{ race.nom }}</td>
+      <td>{{ race.description }}</td>
+      <td>{{ race.bonusCaracteristique }}</td>
+      <td>{{ race.taille }}</td>
+      <td>{{ race.vitesse }}</td>
+      @if (isAdmin()) {
+        <td>
+          <button (click)="add(race.id)">ajouter</button>
+          <button (click)="update(race.id)">Modifier</button>
+          <button (click)="deleteById(race.id)">Supprimer</button>
+        </td>
+      }
+    </tr>
+  </ng-template>
+</p-table>

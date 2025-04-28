@@ -1,0 +1,23 @@
+<form (ngSubmit)="rollDice()" class="dice-form">
+  <div class="dice-inputs">
+    <div *ngFor="let die of diceTypes" class="dice-row">
+      <label for="{{die.key}}">{{ die.label }}</label>
+      <input
+        id="{{die.key}}"
+        type="number"
+        [(ngModel)]="diceForm[die.key]"
+        name="{{die.key}}"
+        min="0"
+        class="dice-input"
+      />
+    </div>
+  </div>
+  <button type="submit" class="roll-button">🎲 Lancer les dés</button>
+</form>
+
+<div *ngIf="results?.length" class="dice-results">
+  <h3>Résultats</h3>
+  <div *ngFor="let result of results" class="dice-result">
+    <p>Total : {{ result.total }}</p>
+  </div>
+</div>

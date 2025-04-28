@@ -1,0 +1,13 @@
+<h2>Liste des PNJ</h2>
+
+<div *ngIf="npcs.length === 0">
+  Aucun PNJ trouvé.
+</div>
+
+<ul *ngIf="npcs.length > 0">
+  <li *ngFor="let npc of npcs">
+    <strong>{{ npc.name }}</strong> - {{ npc.race }} - {{ npc.role }} - Niveau {{ npc.level }}
+    <p>{{ npc.description }}</p>
+    <hr />
+  </li>
+</ul>

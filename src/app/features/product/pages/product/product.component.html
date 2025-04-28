@@ -1,0 +1,23 @@
+<p>product works!</p>
+<table class="table">
+  <thead>
+  <tr>
+    <th></th>
+    <th>Name</th>
+    <th>Price</th>
+    <th>Quantity</th>
+    <th>Action</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let p of listProducts">
+    <td>{{p.title}}</td>
+    <td>{{p.price}}</td>
+    <td>{{p.quantity}}</td>
+    <td>
+      <button type="button" (click)="open(mymodal)">Edit</button>
+      <ng-template #mymodal let-modal></ng-template>
+    </td>
+  </tr>
+  </tbody>
+</table>

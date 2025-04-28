@@ -1,0 +1,40 @@
+<p-table
+  [value]="equipments"
+  [paginator]="true"
+  [rows]="rows"
+  [first]="first"
+  [totalRecords]="totalEquipments"
+  [rowsPerPageOptions]="rowsPerPageOptions"
+  (onPageChange)="onPageChange($event)"
+  [responsiveLayout]="'scroll'"
+>
+
+
+  <ng-template pTemplate="header">
+    <tr>
+      <th>Nom</th>
+      <th>type</th>
+      <th>poid</th>
+      <th>description</th>
+      <th>protection</th>
+      <th>Actions</th>
+    </tr>
+  </ng-template>
+
+  <ng-template pTemplate="body" let-equipment>
+    <tr>
+      <td>{{ equipment.nom }}</td>
+      <td>{{ equipment.type }}</td>
+      <td>{{ equipment.poid }}</td>
+      <td>{{ equipment.description }}</td>
+      <td>{{ equipment.protection }}</td>
+      @if (isAdmin()) {
+        <td>
+          <button (click)="add(equipment.id)">ajouter</button>
+          <button (click)="update(equipment.id)">Modifier</button>
+          <button (click)="deleteById(equipment.id)">Supprimer</button>
+        </td>
+      }
+    </tr>
+  </ng-template>
+</p-table>

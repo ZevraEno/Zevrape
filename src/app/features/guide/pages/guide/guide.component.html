@@ -1,0 +1,38 @@
+<p-table
+  [value]="guides"
+  [paginator]="true"
+  [rows]="rows"
+  [first]="first"
+  [totalRecords]="totalGuides"
+  [rowsPerPageOptions]="rowsPerPageOptions"
+  (onPageChange)="onPageChange($event)"
+  [responsiveLayout]="'scroll'"
+>
+
+
+  <ng-template pTemplate="header">
+    <tr>
+      <th>titre</th>
+      <th>description</th>
+      <th>contenu</th>
+      <th>origin</th>
+      <th>action</th>
+    </tr>
+  </ng-template>
+
+  <ng-template pTemplate="body" let-guide>
+    <tr>
+      <td>{{ guide.titre }}</td>
+      <td>{{ guide.description }}</td>
+      <td>{{ guide.contenu }}</td>
+      <td>{{ guide.origin }}</td>
+      @if (isAdmin()) {
+        <td>
+          <button (click)="add(guide.id)">ajouter</button>
+          <button (click)="update(guide.id)">Modifier</button>
+          <button (click)="deleteById(guide.id)">Supprimer</button>
+        </td>
+      }
+    </tr>
+  </ng-template>
+</p-table>

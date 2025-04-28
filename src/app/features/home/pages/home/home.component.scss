@@ -1,0 +1,158 @@
+
+$primary-color: #4a38bc;
+$secondary-color: #18b1a4;
+$bg-color: #f4f4f4;
+$text-color: #333;
+$card-bg: #fff;
+$font-family: 'Arial', sans-serif;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $font-family;
+  background-color: $bg-color;
+  color: $text-color;
+  line-height: 1.6;
+}
+
+.home-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.header {
+  background-color: $primary-color;
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+  position: relative;
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  nav {
+    margin-top: 20px;
+  }
+
+  nav ul {
+    list-style: none;
+    padding: 10px 0;
+
+    li {
+      display: inline;
+      margin: 0 20px;
+
+      a {
+        color: #fff;
+        text-decoration: none;
+        font-size: 1.1rem;
+        transition: color 0.3s;
+
+        &:hover {
+          color: $secondary-color;
+        }
+      }
+    }
+  }
+}
+
+.hero {
+  background: linear-gradient(to right, #614caf, #48388e);
+  color: #fff;
+  text-align: center;
+  padding: 50px 20px;
+
+  h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+  }
+
+  p {
+    font-size: 1.2rem;
+  }
+}
+
+.features {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+  padding: 40px 20px;
+
+  .card {
+    background-color: $card-bg;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    transition: transform 0.3s, box-shadow 0.3s;
+
+    &:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+    }
+
+    h3 {
+      font-size: 1.6rem;
+      margin-bottom: 15px;
+      color: $primary-color;
+    }
+
+    p {
+      font-size: 1rem;
+    }
+  }
+}
+
+.footer {
+  background-color: #333;
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+  position: relative;
+  width: 100%;
+
+  p {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .header h1 {
+    font-size: 2rem;
+  }
+
+  .hero h2 {
+    font-size: 1.8rem;
+  }
+
+  .features {
+    padding: 20px;
+  }
+
+  .card {
+    padding: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .header nav ul {
+    padding: 10px 0;
+  }
+
+  .header nav li {
+    display: block;
+    margin: 5px 0;
+  }
+
+  .hero h2 {
+    font-size: 1.6rem;
+  }
+
+  .features {
+    grid-template-columns: 1fr;
+  }
+}
