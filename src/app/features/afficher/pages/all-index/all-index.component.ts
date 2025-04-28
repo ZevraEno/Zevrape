@@ -51,10 +51,6 @@ export class AllIndexComponent {
           label: 'Sorts et Competences',
           routerLink: '/spell',
         },
-        {
-          label: 'livre',
-          routerLink: '/book',
-        },
       ];
       if (this.isConnected()) {
         this.items = [

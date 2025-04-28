@@ -184,7 +184,6 @@ export class AppComponent {
         { label: 'Afficher', routerLink: '/affiche' },
         { label: 'Personnage', routerLink: '/personnage' },
         { label: 'Univers', routerLink: '/choixUniver' },
-        { label: 'Chat', routerLink: '/message' },
       ];
 
       if (this.isConnected()) {
@@ -200,12 +199,18 @@ export class AppComponent {
           this.items.push({
             label: 'Rejoindre une partie',
             routerLink: '/waitingroom'
-          });
+          },
+          { label: 'Chat',
+            routerLink: '/message'
+          },);
         } else if (this.role() === 'GameMaster') {
           this.items.push(
             {
               label: 'Fiche de Personnage',
               routerLink: '/FichePerso',
+            },
+            { label: 'Chat',
+              routerLink: '/message'
             },
           );
         }
