@@ -33,39 +33,27 @@ export class AllIndexComponent {
       this.items = [
         {
           label: 'Guide',
-          icon: 'pi pi-home',
           routerLink: '/guide',
-          routerLinkActiveOptions: {exact: true},
         },
         {
           label: 'Equipment',
-          icon: 'pi pi-trophy',
           routerLink: '/equipment',
-          routerLinkActiveOptions: {exact: false},
         },
         {
           label: 'Races',
-          icon: 'pi pi-trophy',
           routerLink: '/race',
-          routerLinkActiveOptions: {exact: false},
         },
         {
           label: 'Classes',
-          icon: 'pi pi-trophy',
           routerLink: '/classe',
-          routerLinkActiveOptions: {exact: false},
         },
         {
           label: 'Sorts et Competences',
-          icon: 'pi pi-trophy',
           routerLink: '/spell',
-          routerLinkActiveOptions: {exact: false},
         },
         {
           label: 'livre',
-          icon: 'pi pi-trophy',
           routerLink: '/book',
-          routerLinkActiveOptions: {exact: false},
         },
       ];
       if (this.isConnected()) {
@@ -78,45 +66,31 @@ export class AllIndexComponent {
             ...this.items,
             {
               label: 'Fiche de Personnage',
-              icon: 'pi pi-user',
               routerLink: '/FichePerso',
-              routerLinkActiveOptions: {exact: true},
             },
             {
               label: 'lancer de dés',
-              icon: 'pi pi-user',
               routerLink: '/dice',
-              routerLinkActiveOptions: {exact: true},
             },
             {
               label: 'Npc',
-              icon: 'pi pi-user',
               routerLink: '/npc',
-              routerLinkActiveOptions: {exact: true},
             },
             {
               label: 'Quests',
-              icon: 'pi pi-user-plus',
               routerLink: '/quest',
-              routerLinkActiveOptions: {exact: true},
             },
             {
               label: 'Items',
-              icon: 'pi pi-user-plus',
               routerLink: '/item',
-              routerLinkActiveOptions: {exact: true},
             },
             {
               label: 'Creation Lore',
-              icon: 'pi pi-user-plus',
               routerLink: '/lore',
-              routerLinkActiveOptions: {exact: true},
             },
             {
               label: 'Note',
-              icon: 'pi pi-user-plus',
               routerLink: '/note',
-              routerLinkActiveOptions: {exact: true},
             }
           ];
         } else if (this.role() === 'GameMaster') {
@@ -128,39 +102,27 @@ export class AllIndexComponent {
             },
             {
               label: 'lancer de dés',
-              icon: 'pi pi-user',
               routerLink: '/dice',
-              routerLinkActiveOptions: {exact: true},
             },
             {
               label: 'Npc',
-              icon: 'pi pi-user',
               routerLink: '/npc',
-              routerLinkActiveOptions: {exact: true},
             },
             {
               label: 'Quests',
-              icon: 'pi pi-user-plus',
               routerLink: '/quest',
-              routerLinkActiveOptions: {exact: true},
             },
             {
               label: 'Items',
-              icon: 'pi pi-user-plus',
               routerLink: '/item',
-              routerLinkActiveOptions: {exact: true},
             },
             {
               label: 'Creation Lore',
-              icon: 'pi pi-user-plus',
               routerLink: '/lore',
-              routerLinkActiveOptions: {exact: true},
             },
             {
               label: 'Note',
-              icon: 'pi pi-user-plus',
               routerLink: '/note',
-              routerLinkActiveOptions: {exact: true},
             }
           ];
         }
